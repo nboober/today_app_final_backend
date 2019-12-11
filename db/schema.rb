@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2019_12_11_162134) do
   create_table "clothes", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "weather_category"
+    t.integer "weather_category"
+    t.integer "temp_category"
     t.string "clothes_type"
+    t.string "image"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -42,7 +44,6 @@ ActiveRecord::Schema.define(version: 2019_12_11_162134) do
 
   create_table "outfits", force: :cascade do |t|
     t.string "name"
-    t.string "weather_category"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

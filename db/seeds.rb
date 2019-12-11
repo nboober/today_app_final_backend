@@ -10,8 +10,8 @@
 User.destroy_all()
 Outfit.destroy_all()
 Clothe.destroy_all()
-Outfit_favorite.destroy_all()
-Outfit_clothe.destroy_all()
+OutfitFavorite.destroy_all()
+OutfitClothe.destroy_all()
 
 nick = User.create(username: 'nboober', password: 'password', avatar: 'https://www.cvent-assets.com/csn-search-app-ui/assets/images/venue-card-placeholder__18v-Z.png', firstname: "Nick", lastname: "Boober")
 
@@ -24,11 +24,11 @@ jewelry = Clothe.create(name: "watch", location: "top of main dresser", weather_
 
 outfit1 = Outfit.create(name: "outfit 1", user_id: nick.id)
 
-combo = outfit_clothes.create(outfit_id: outfit1.id, clothe_id: shirt.id)
-combo1 = outfit_clothes.create(outfit_id: outfit1.id, clothe_id: pants.id)
-combo2 = outfit_clothes.create(outfit_id: outfit1.id, clothe_id: shoes.id)
-combo3 = outfit_clothes.create(outfit_id: outfit1.id, clothe_id: hat.id)
-combo4 = outfit_clothes.create(outfit_id: outfit1.id, clothe_id: belt.id)
-combo5 = outfit_clothes.create(outfit_id: outfit1.id, clothe_id: jewelry.id)
+combo = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: shirt.id)
+combo1 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: pants.id)
+combo2 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: shoes.id)
+combo3 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: hat.id)
+combo4 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: belt.id)
+combo5 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: jewelry.id)
 
-favorite1 = Outfit_favorite.create(name: "Favorite 1", user_id: nick.id, outfit_id: outfit1.id)
+favorite1 = OutfitFavorite.create(name: "Favorite 1", user_id: nick.id, outfit_id: outfit1.id)
