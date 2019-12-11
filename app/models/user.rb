@@ -1,5 +1,8 @@
 class User < ApplicationRecord
     has_secure_password
+    has_many :outfits
+    has_many :clothes
+    has_many :outfit_favorites
     
     validates :username, uniqueness: {case_sensitive: false}
     validates :username, presence: true
