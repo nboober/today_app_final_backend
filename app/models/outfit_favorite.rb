@@ -1,0 +1,2 @@
+class OutfitFavorite < ApplicationRecord
+end
