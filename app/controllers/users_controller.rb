@@ -17,6 +17,12 @@ class UsersController < ApplicationController
         render json: user.to_json(to_serialized_json)
     end
 
+    def update
+        user = User.find(params[:id])
+        user.update(user_params)
+        render json: user.to_json(to_serialized_json)
+    end
+
     private
 
     def user_params
