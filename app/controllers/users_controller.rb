@@ -28,6 +28,12 @@ class UsersController < ApplicationController
             :include => {
                 :clothes => {
                     :except => [:updated_at]
+                },
+                :outfits => {
+                    :except => [:updated_at]
+                },
+                :outfitFavorites => {
+                    :except => [:updated_at]
                 }
             },
             :except => [:updated_at]
