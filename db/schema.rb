@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_12_11_162134) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "avatar", default: "https://www.cvent-assets.com/csn-search-app-ui/assets/images/venue-card-placeholder__18v-Z.png"
+    t.string "avatar"
     t.string "firstname"
     t.string "lastname"
     t.datetime "created_at", precision: 6, null: false

@@ -7,7 +7,7 @@ class AuthController < ApplicationController
             payload = {user_id: user.id}
             render json: {
                 message: "Login Successful",
-                user: user,
+                user: JSON.parse(user.to_json(to_serialized_json)),
                 token: encode(payload)
             }, status: :accepted
         else
@@ -15,6 +15,18 @@ class AuthController < ApplicationController
                 message: "Login Failed"
             }, status: :unauthorized
         end
+    end
+
+    private
+    def to_serialized_json
+        {
+            :include => {
+                :clothes => {
+                    :except => [:updated_at]
+                }
+            },
+            :except => [:updated_at]
+        }
     end
 
 end

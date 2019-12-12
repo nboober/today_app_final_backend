@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :clothes
   resources :outfits
   resources :weather
-  resources :users
+  resources :users, :except => [:show]
 
   # user
   post '/login', to: 'auth#create'
