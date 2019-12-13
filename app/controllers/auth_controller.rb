@@ -11,6 +11,7 @@ class AuthController < ApplicationController
                 token: encode(payload)
             }, status: :accepted
         else
+            # byebug
             render json: {
                 message: "Login Failed"
             }, status: :unauthorized

@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     end
 
     def update
+        token = request.headers["Authorization"]
         user = User.find(params[:id])
         user.update(user_params)
         render json: user.to_json(to_serialized_json)
