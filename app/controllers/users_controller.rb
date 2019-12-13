@@ -23,6 +23,12 @@ class UsersController < ApplicationController
         render json: user.to_json(to_serialized_json)
     end
 
+    def destroy
+        user = User.find(params[:id])
+        user.destroy
+        render json: user
+    end
+
     private
 
     def user_params
