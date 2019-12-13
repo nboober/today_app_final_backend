@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
-        render json: users
+        render json: users.to_json(to_serialized_json)
     end
 
     def create
