@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(user_params)
-        render json: user
+        render json: user.to_json(to_serialized_json)
     end
 
     def show
@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     end
 
     def update
-        token = request.headers["Authorization"]
         user = User.find(params[:id])
         user.update(user_params)
         render json: user.to_json(to_serialized_json)
