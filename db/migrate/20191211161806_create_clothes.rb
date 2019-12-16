@@ -3,8 +3,8 @@ class CreateClothes < ActiveRecord::Migration[6.0]
     create_table :clothes do |t|
       t.string :name
       t.string :location
-      t.integer :weather_category
-      t.integer :temp_category
+      t.string :weather_category, :array => true, :default => []
+      t.string :temp_category, :array => true, :default => []
       t.string :clothes_type
       t.string :image
       t.integer :user_id

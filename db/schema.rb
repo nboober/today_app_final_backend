@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2019_12_11_162134) do
   create_table "clothes", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.integer "weather_category"
-    t.integer "temp_category"
+    t.string "weather_category", default: [], array: true
+    t.string "temp_category", default: [], array: true
     t.string "clothes_type"
     t.string "image"
     t.integer "user_id"
