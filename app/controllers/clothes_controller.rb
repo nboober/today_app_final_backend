@@ -11,6 +11,11 @@ class ClothesController < ApplicationController
         render json: clothing
     end
 
+    def destroy
+        clothing = Clothe.find(params[:id])
+        clothing.destroy
+    end
+
     private
     def clothing_params
         params.require(:clothe).permit(:name, :location, :weather_category, :temp_category, :clothes_type, :image, :user_id)
