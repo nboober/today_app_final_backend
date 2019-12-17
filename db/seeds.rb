@@ -22,13 +22,3 @@ hat = Clothe.create(name: "fun hat", location: "hook by the front door", weather
 belt = Clothe.create(name: "black belt", location: "closet 1, drawer 3", weather_category: "any", temp_category: "any", clothes_type: "belt", image: "https://images-na.ssl-images-amazon.com/images/I/71xnIXoB7YL._UX679_.jpg", user_id: nick.id)
 jewelry = Clothe.create(name: "watch", location: "top of main dresser", weather_category: "any", temp_category: "any", clothes_type: "jewelry", image: "https://www.hamiltonwatch.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/H/8/H82315331_4.png", user_id: nick.id)
 
-outfit1 = Outfit.create(name: "outfit 1", user_id: nick.id)
-
-combo = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: shirt.id)
-combo1 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: pants.id)
-combo2 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: shoes.id)
-combo3 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: hat.id)
-combo4 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: belt.id)
-combo5 = OutfitClothe.create(outfit_id: outfit1.id, clothe_id: jewelry.id)
-
-favorite1 = OutfitFavorite.create(name: "Favorite 1", user_id: nick.id, outfit_id: outfit1.id)
