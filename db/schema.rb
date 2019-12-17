@@ -36,14 +36,12 @@ ActiveRecord::Schema.define(version: 2019_12_11_162134) do
 
   create_table "outfit_favorites", force: :cascade do |t|
     t.integer "user_id"
-    t.string "name"
     t.integer "outfit_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "outfits", force: :cascade do |t|
-    t.string "name"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

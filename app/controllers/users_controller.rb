@@ -35,21 +35,4 @@ class UsersController < ApplicationController
         params.require(:user).permit(:username, :password, :firstname, :lastname, :avatar)
     end
 
-    def to_serialized_json
-        {
-            :include => {
-                :clothes => {
-                    :except => [:updated_at]
-                },
-                :outfits => {
-                    :except => [:updated_at]
-                },
-                :outfitFavorites => {
-                    :except => [:updated_at]
-                }
-            },
-            :except => [:updated_at]
-        }
-    end
-
 end
