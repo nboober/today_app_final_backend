@@ -10,6 +10,11 @@ class OutfitsController < ApplicationController
         render json: outfit.to_json(to_serialized_json)
     end
 
+    def destroy
+        outfit = Outfit.find(params[:id])
+        outfit.destroy
+    end
+
     private
     def outfit_params
         params.require(:outfit).permit(:user_id)
