@@ -1,12 +1,17 @@
 class OutfitClothesController < ApplicationController
 
+    def index
+        outfitclothes = OutfitClothe.all
+        render json: outfitclothes.to_json(to_serialized_json)
+    end
+
     def create
         combo = OutfitClothe.create(combo_params)
-        render json: combo
+        render json: combo.to_json(to_serialized_json)
     end
 
     def show
-        combo = OutfitClothe.find_by(:outfit_id: params[:id])
+        combo = OutfitClothe.find_by(outfit_id: params[:id])
         render json: combo.to_json(to_serialized_json)
     end
 
@@ -15,10 +20,7 @@ class OutfitClothesController < ApplicationController
     def to_serialized_json
         {
             :include => {
-                :clothes => {
-                    :except => [:updated_at]
-                },
-                :outfits => {
+                :clothe => {
                     :except => [:updated_at]
                 }
             },
