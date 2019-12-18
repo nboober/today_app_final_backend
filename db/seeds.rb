@@ -21,4 +21,5 @@ shoes = Clothe.create(name: "black shoes", location: "closet 1, floor", weather_
 hat = Clothe.create(name: "fun hat", location: "hook by the front door", weather_category: "any", temp_category: "any", clothes_type: "hat", image: "https://www.happygabby.com/wp-content/uploads/2014/11/rainbow-sock-monkey-knit-hat.jpg", user_id: nick.id)
 belt = Clothe.create(name: "black belt", location: "closet 1, drawer 3", weather_category: "any", temp_category: "any", clothes_type: "belt", image: "https://images-na.ssl-images-amazon.com/images/I/71xnIXoB7YL._UX679_.jpg", user_id: nick.id)
 jewelry = Clothe.create(name: "watch", location: "top of main dresser", weather_category: "any", temp_category: "any", clothes_type: "jewelry", image: "https://www.hamiltonwatch.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/H/8/H82315331_4.png", user_id: nick.id)
+jacket = Clothe.create(name: "hoodie", location: "hook by the front door", weather_category: "any", temp_category: "any", clothes_type: "jacket", image: "https://images.boardriders.com/global/rvca-products/all/default/medium-large/m602srrs_rvca,fg_ath_frt1.jpg", user_id: nick.id)
 
