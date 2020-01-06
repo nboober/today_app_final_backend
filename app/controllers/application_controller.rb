@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::API
 
     def secret_key
-        Rails.application.secrets.secret_key_base
+        # Rails.application.secrets.secret_key_base
+        'h3llo'
     end
 
     # return a token using JWT given some payload
